@@ -1,0 +1,692 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/nkpatel6/ece411/mp2/simulation/modelsim
+valu
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 DXx4 work 11 rv32i_types 0 22 F3b9UDT`JiTfU<_LO`MY>1
+DXx4 work 11 alu_sv_unit 0 22 1k;8ZZYAZB4WnbcojUPZF2
+VFhWQodO82z9]K]Ug^`@j:2
+r1
+31
+IDm[F_AnjTNj]WGJ0O4:KG2
+S1
+Z3 d/home/nkpatel6/ece411/mp2/simulation/modelsim
+Z4 w1538535487
+Z5 8/home/nkpatel6/ece411/mp2/alu.sv
+Z6 F/home/nkpatel6/ece411/mp2/alu.sv
+L0 3
+Z7 OV;L;10.1d;51
+Z8 !s108 1539029025.617942
+Z9 !s107 /home/nkpatel6/ece411/mp2/alu.sv|
+Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/alu.sv|
+Z11 o-sv -work work -O0
+Z12 !s92 -sv -work work +incdir+/home/nkpatel6/ece411/mp2 -O0
+!s85 0
+!i10b 1
+!s100 dUXJlkKY3[nAjjhRa9aRN1
+!s105 alu_sv_unit
+!s101 -O0
+Xalu_sv_unit
+R1
+R2
+V1k;8ZZYAZB4WnbcojUPZF2
+r1
+31
+I1k;8ZZYAZB4WnbcojUPZF2
+S1
+R3
+R4
+R5
+R6
+L0 1
+R7
+R8
+R9
+R10
+R11
+R12
+!s85 0
+!i10b 1
+!s100 FmTfFNbPfR@JFa68QUP>a2
+!i103 1
+!s101 -O0
+varray
+R1
+IkTVfLYQE1^JH1F7nFCXmk0
+V1Rc39i@gH5:KLRj[ZT`F;0
+S1
+R3
+R4
+8/home/nkpatel6/ece411/mp2/array.sv
+F/home/nkpatel6/ece411/mp2/array.sv
+L0 2
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 1H^[C?5O]=]SAkQGhMRmj1
+!s105 array_sv_unit
+!s85 0
+!s108 1539029024.266598
+!s107 /home/nkpatel6/ece411/mp2/array.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/array.sv|
+!s101 -O0
+vcache
+R1
+I3GdUO1E;IKE9X2fYTGEnD1
+VdXfmXKBAjAl7e43a_5==>3
+S1
+R3
+w1538535800
+8/home/nkpatel6/ece411/mp2/cache.sv
+F/home/nkpatel6/ece411/mp2/cache.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 lL6i1<oaiZfBnU8?YQ4iR1
+!s105 cache_sv_unit
+!s85 0
+!s108 1539029026.096960
+!s107 /home/nkpatel6/ece411/mp2/cache.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/cache.sv|
+!s101 -O0
+vcache_compare
+R1
+I9I=XD=:1RhAfiz;6YJC]=0
+V?8WJ[4H:HC^_4il3d=0hf3
+S1
+R3
+R4
+8/home/nkpatel6/ece411/mp2/cache_compare.sv
+F/home/nkpatel6/ece411/mp2/cache_compare.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 m:n5AMomjRj:=SLk_<1GG3
+!s105 cache_compare_sv_unit
+!s85 0
+!s108 1539029024.166188
+!s107 /home/nkpatel6/ece411/mp2/cache_compare.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/cache_compare.sv|
+!s101 -O0
+vcache_control
+R1
+I1[F2F:iR1a9Y0i3;[dAO;3
+VTcVObg0:0hkhz6zkVh2BV2
+S1
+R3
+w1539013865
+8/home/nkpatel6/ece411/mp2/cache_control.sv
+F/home/nkpatel6/ece411/mp2/cache_control.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 92<@WzWN9fgV<mUPG6<3H1
+!s105 cache_control_sv_unit
+!s85 0
+!s108 1539029024.072741
+!s107 /home/nkpatel6/ece411/mp2/cache_control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/cache_control.sv|
+!s101 -O0
+vcache_datapath
+R1
+I0f8cmi[00Ijja=o4aMA?:0
+VUX1IFNbKzC7LRYW9nJ]Qh0
+S1
+R3
+w1539028321
+8/home/nkpatel6/ece411/mp2/cache_datapath.sv
+F/home/nkpatel6/ece411/mp2/cache_datapath.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 jQkT:<5lYM1bXCCcgMEIf3
+!s105 cache_datapath_sv_unit
+!s85 0
+!s108 1539029025.240982
+!s107 /home/nkpatel6/ece411/mp2/cache_datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/cache_datapath.sv|
+!s101 -O0
+vcomparator
+R1
+R2
+DXx4 work 18 comparator_sv_unit 0 22 KX?XU`?1MXZ`WkCOfJVGM2
+VjhVZKXaHOaIa=Ygcjf<mi3
+r1
+31
+IlfWfBa]N[01h1NbX]m9j71
+S1
+R3
+Z13 w1538535488
+Z14 8/home/nkpatel6/ece411/mp2/comparator.sv
+Z15 F/home/nkpatel6/ece411/mp2/comparator.sv
+L0 3
+R7
+Z16 !s108 1539029025.466264
+Z17 !s107 /home/nkpatel6/ece411/mp2/comparator.sv|
+Z18 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/comparator.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 GK?LULb9?JL>Z2LfDe5b02
+!s105 comparator_sv_unit
+!s101 -O0
+Xcomparator_sv_unit
+R1
+R2
+VKX?XU`?1MXZ`WkCOfJVGM2
+r1
+31
+IKX?XU`?1MXZ`WkCOfJVGM2
+S1
+R3
+R13
+R14
+R15
+L0 1
+R7
+R16
+R17
+R18
+R11
+R12
+!s85 0
+!i10b 1
+!s100 `8E8T>m=^j7zm_Xb]EkFG2
+!i103 1
+!s101 -O0
+vcpu
+R1
+R2
+DXx4 work 11 cpu_sv_unit 0 22 WGMWEjz78m]mi8dZbNbUN0
+VKlN94hf97ki3=>l[>3J`H1
+r1
+31
+IQ2WAYn7^^bi?]:V@ECMfb2
+S1
+R3
+R13
+Z19 8/home/nkpatel6/ece411/mp2/cpu.sv
+Z20 F/home/nkpatel6/ece411/mp2/cpu.sv
+L0 3
+R7
+Z21 !s108 1539029026.180300
+Z22 !s107 /home/nkpatel6/ece411/mp2/cpu.sv|
+Z23 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/cpu.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 RcL2E@J9ea:^3DI@am4aJ1
+!s105 cpu_sv_unit
+!s101 -O0
+vcpu_control
+R1
+R2
+DXx4 work 19 cpu_control_sv_unit 0 22 b7hd=n4nI7lCPneFHaLD80
+V0ifXWGQHD:g4SOSnd6DIl1
+r1
+31
+I3Zf@;aoA`YV:Um3i<kDSm1
+S1
+R3
+R13
+Z24 8/home/nkpatel6/ece411/mp2/cpu_control.sv
+Z25 F/home/nkpatel6/ece411/mp2/cpu_control.sv
+L0 3
+R7
+Z26 !s108 1539029025.119567
+Z27 !s107 /home/nkpatel6/ece411/mp2/cpu_control.sv|
+Z28 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/cpu_control.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 9baDedY1XlF4k::aG63Z^2
+!s105 cpu_control_sv_unit
+!s101 -O0
+Xcpu_control_sv_unit
+R1
+R2
+Vb7hd=n4nI7lCPneFHaLD80
+r1
+31
+Ib7hd=n4nI7lCPneFHaLD80
+S1
+R3
+R13
+R24
+R25
+L0 1
+R7
+R26
+R27
+R28
+R11
+R12
+!s85 0
+!i10b 1
+!s100 VUBCE[i38;QPQAOkGj;1I1
+!i103 1
+!s101 -O0
+vcpu_datapath
+R1
+R2
+DXx4 work 20 cpu_datapath_sv_unit 0 22 J]`6V4m0o`2Pz9cm26BU@3
+VWEM22AX]f^C<NlYEM9_g92
+r1
+31
+IgV:_<7H>6;6nQ]bhg=SZT2
+S1
+R3
+R13
+Z29 8/home/nkpatel6/ece411/mp2/cpu_datapath.sv
+Z30 F/home/nkpatel6/ece411/mp2/cpu_datapath.sv
+L0 3
+R7
+Z31 !s108 1539029025.741550
+Z32 !s107 /home/nkpatel6/ece411/mp2/cpu_datapath.sv|
+Z33 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/cpu_datapath.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 9YJO>F=oI@Od7PjZm@0^Y2
+!s105 cpu_datapath_sv_unit
+!s101 -O0
+Xcpu_datapath_sv_unit
+R1
+R2
+VJ]`6V4m0o`2Pz9cm26BU@3
+r1
+31
+IJ]`6V4m0o`2Pz9cm26BU@3
+S1
+R3
+R13
+R29
+R30
+L0 1
+R7
+R31
+R32
+R33
+R11
+R12
+!s85 0
+!i10b 1
+!s100 kiC]Rzg_63L]YBi]UOE<I0
+!i103 1
+!s101 -O0
+Xcpu_sv_unit
+R1
+R2
+VWGMWEjz78m]mi8dZbNbUN0
+r1
+31
+IWGMWEjz78m]mi8dZbNbUN0
+S1
+R3
+R13
+R19
+R20
+L0 1
+R7
+R21
+R22
+R23
+R11
+R12
+!s85 0
+!i10b 1
+!s100 fOG^PU]YPaCEf8@[:gB5X3
+!i103 1
+!s101 -O0
+vdata_modifier
+R1
+IW]niO2FKE=z5edza[e=U_0
+VS3fOMRSKG__j<P6ZR;CMM1
+S1
+R3
+w1539024596
+8/home/nkpatel6/ece411/mp2/data_modifier.sv
+F/home/nkpatel6/ece411/mp2/data_modifier.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 F]TY3m>GW@IdKL9HoDGHZ0
+!s105 data_modifier_sv_unit
+!s85 0
+!s108 1539029023.975150
+!s107 /home/nkpatel6/ece411/mp2/data_modifier.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/data_modifier.sv|
+!s101 -O0
+vir
+R1
+R2
+DXx4 work 10 ir_sv_unit 0 22 zEam3BJWDGkJ;D:mnz=>b1
+VX:^eUz7g]T8ooJ<j0>UKo1
+r1
+31
+IZAh:H@bMhkP@9[=N5T@1h0
+S1
+R3
+R13
+Z34 8/home/nkpatel6/ece411/mp2/ir.sv
+Z35 F/home/nkpatel6/ece411/mp2/ir.sv
+L0 3
+R7
+Z36 !s108 1539029025.342101
+Z37 !s107 /home/nkpatel6/ece411/mp2/ir.sv|
+Z38 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/ir.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 ]E<kd<?99A]Z`K7X6I@6G2
+!s105 ir_sv_unit
+!s101 -O0
+Xir_sv_unit
+R1
+R2
+VzEam3BJWDGkJ;D:mnz=>b1
+r1
+31
+IzEam3BJWDGkJ;D:mnz=>b1
+S1
+R3
+R13
+R34
+R35
+L0 1
+R7
+R36
+R37
+R38
+R11
+R12
+!s85 0
+!i10b 1
+!s100 ZJP?Dh@E1KdL1=CaJ2XF:0
+!i103 1
+!s101 -O0
+vldselect
+R1
+IU;O16]>Vh66b<FeH?L;<<0
+V36]OiDC;n7Y_IERRZg8L93
+S1
+R3
+R13
+8/home/nkpatel6/ece411/mp2/ldselect.sv
+F/home/nkpatel6/ece411/mp2/ldselect.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 NMJ`]bHozU^Z:lQ^m]AX_2
+!s105 ldselect_sv_unit
+!s85 0
+!s108 1539029025.044887
+!s107 /home/nkpatel6/ece411/mp2/ldselect.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/ldselect.sv|
+!s101 -O0
+vmp2
+R1
+R2
+DXx4 work 11 mp2_sv_unit 0 22 WHi_9PUzmMH]KhJPj9n[[1
+VcB0dabDWkNSbUEg0=zmDM2
+r1
+31
+I[dc5]Wk^Tl8DQjMk`m]>11
+S1
+R3
+R13
+Z39 8/home/nkpatel6/ece411/mp2/mp2.sv
+Z40 F/home/nkpatel6/ece411/mp2/mp2.sv
+L0 2
+R7
+Z41 !s108 1539029026.370545
+Z42 !s107 /home/nkpatel6/ece411/mp2/mp2.sv|
+Z43 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/mp2.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 JFWEn4XNjX2jSGBQg]cm[3
+!s105 mp2_sv_unit
+!s101 -O0
+Xmp2_sv_unit
+R1
+R2
+VWHi_9PUzmMH]KhJPj9n[[1
+r1
+31
+IWHi_9PUzmMH]KhJPj9n[[1
+S1
+R3
+R13
+R39
+R40
+L0 1
+R7
+R41
+R42
+R43
+R11
+R12
+!s85 0
+!i10b 1
+!s100 dQ<7@LiPG4iXG>QAJD1162
+!i103 1
+!s101 -O0
+vmp2_tb
+R1
+I32HVQG_>FXIU=TZFjZl<E0
+VmI5LY:mO^?[OUYl7FT8h@2
+S1
+R3
+R13
+8/home/nkpatel6/ece411/mp2/mp2_tb.sv
+F/home/nkpatel6/ece411/mp2/mp2_tb.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 j09:X`kP<^F0Zb0fzijSb3
+!s105 mp2_tb_sv_unit
+!s85 0
+!s108 1539029026.538276
+!s107 /home/nkpatel6/ece411/mp2/mp2_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/mp2_tb.sv|
+!s101 -O0
+vmux2
+R1
+Ig]4MZJ4O`B[X21VN_zi`32
+Vm:h1@_?d9XDk^V?Kb1omM1
+S1
+R3
+R13
+8/home/nkpatel6/ece411/mp2/mux2.sv
+F/home/nkpatel6/ece411/mp2/mux2.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 R`JB21ZIY7a^a:iEN3m;U0
+!s105 mux2_sv_unit
+!s85 0
+!s108 1539029024.967698
+!s107 /home/nkpatel6/ece411/mp2/mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/mux2.sv|
+!s101 -O0
+vmux8
+R1
+IfG`QDaJQh1fibT[Vz<2QO2
+VJj3>7z33Ehj`f[Ck=[gbh0
+S1
+R3
+R13
+8/home/nkpatel6/ece411/mp2/mux8.sv
+F/home/nkpatel6/ece411/mp2/mux8.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 Y_X4^O>XIQKHXAHc>832m3
+!s105 mux8_sv_unit
+!s85 0
+!s108 1539029024.724117
+!s107 /home/nkpatel6/ece411/mp2/mux8.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/mux8.sv|
+!s101 -O0
+vpc_register
+R1
+IEfM>jADC5Ak@7_3lb_H@d3
+VklRD>XzTggk8KSC9SP52K1
+S1
+R3
+R13
+8/home/nkpatel6/ece411/mp2/pc_reg.sv
+F/home/nkpatel6/ece411/mp2/pc_reg.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 Y0<4CS@e_:b`eI^F5C7282
+!s105 pc_reg_sv_unit
+!s85 0
+!s108 1539029024.634103
+!s107 /home/nkpatel6/ece411/mp2/pc_reg.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/pc_reg.sv|
+!s101 -O0
+vphysical_memory
+R1
+!i10b 1
+!s100 NgPZGO7NUE^^[LC<HfF9c2
+I[Ina=Qf]ohh<aGOaR<@G;0
+VQ^Ve^R_UNR[PEe]>jQ<n`3
+!s105 physical_memory_sv_unit
+S1
+R3
+R13
+8/home/nkpatel6/ece411/mp2/physical_memory.sv
+F/home/nkpatel6/ece411/mp2/physical_memory.sv
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1539029026.614504
+!s107 /home/nkpatel6/ece411/mp2/physical_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/physical_memory.sv|
+!s101 -O0
+R11
+R12
+vregfile
+R1
+IHA7MH7U;BB3<1?JQX>V4G0
+VGW?iBdZdblFljzF;>DX>>2
+S1
+R3
+R13
+8/home/nkpatel6/ece411/mp2/regfile.sv
+F/home/nkpatel6/ece411/mp2/regfile.sv
+L0 2
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 19IbiE1zFYG[Mn3aDG5Wh0
+!s105 regfile_sv_unit
+!s85 0
+!s108 1539029024.547750
+!s107 /home/nkpatel6/ece411/mp2/regfile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/regfile.sv|
+!s101 -O0
+vregister
+R1
+I>JCWHWS=HJ<lmDN3@agTb2
+VdFa=ka6HO1;nc3L`IjmEK2
+S1
+R3
+R13
+8/home/nkpatel6/ece411/mp2/register.sv
+F/home/nkpatel6/ece411/mp2/register.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 mo:K85Hh1cdX^?De;GzO=0
+!s105 register_sv_unit
+!s85 0
+!s108 1539029024.456189
+!s107 /home/nkpatel6/ece411/mp2/register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/register.sv|
+!s101 -O0
+Xrv32i_types
+R1
+IF3b9UDT`JiTfU<_LO`MY>1
+VF3b9UDT`JiTfU<_LO`MY>1
+S1
+R3
+R13
+8/home/nkpatel6/ece411/mp2/rv32i_types.sv
+F/home/nkpatel6/ece411/mp2/rv32i_types.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 VeKgMTezZ3CfTRTh2LM>H0
+!s85 0
+!s108 1539029024.355556
+!s107 /home/nkpatel6/ece411/mp2/rv32i_types.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/nkpatel6/ece411/mp2|/home/nkpatel6/ece411/mp2/rv32i_types.sv|
+!s101 -O0

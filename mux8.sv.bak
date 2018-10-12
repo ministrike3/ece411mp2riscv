@@ -1,0 +1,26 @@
+module mux8 #(parameter width = 32)
+(
+input [2:0] sel,
+input [width-1:0] a, b, c, d, e, f, g, h,
+output logic [width-1:0] z
+);
+always_comb
+begin
+if (sel == 0)
+z = a;
+else if (sel == 1)
+z = b;
+else if (sel == 2)
+z = c;
+else if (sel == 3)
+z = d;
+else if (sel == 4)
+z = e;
+else if (sel == 5)
+z = f;
+else if (sel == 6)
+z = g;
+else
+z = h;
+end
+endmodule : mux8

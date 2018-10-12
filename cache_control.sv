@@ -1,0 +1,111 @@
+module cache_control(
+input clk,
+input mem_read,
+input mem_write,
+input pmem_resp,
+input hit0,
+input hit1,
+input dirty_c,
+input valid_in,
+input lru_out,
+output logic mem_resp,
+output logic pmem_read,
+output logic pmem_write,
+output logic load_lru,
+output logic way_sel,
+output logic lru_in,
+output logic load_word,
+output logic load_line,
+output logic tag_sel
+);
+
+enum int unsigned {
+    standard_s,
+    write_back_s,
+    read_s
+} state, next_state;
+
+always_comb
+begin : state_actions
+  pmem_read = 1'b0;
+  pmem_write = 1'b0;
+  mem_resp = 1'b0;
+  load_lru = 1'b0;
+  way_sel = 1'b0;
+  lru_in = 1'b0;
+  load_word = 0;
+  load_line = 0;
+  tag_sel=0;
+
+  case(state)
+    standard_s: begin
+        if(hit0==1)begin
+        mem_resp=1;
+        load_lru=1;
+        way_sel=0;
+        lru_in=1;
+        load_word=mem_write;
+        end
+        else if (hit1==1)begin
+        mem_resp=1;
+        load_lru=1;
+        way_sel=1;
+        lru_in=0;
+        load_word=mem_write;
+        end
+      end
+    read_s: begin
+        pmem_read=1;
+        way_sel=lru_out;
+        load_line=1;
+        tag_sel=1;
+      end
+    write_back_s: begin
+        way_sel=lru_out;
+        pmem_write=1;
+        tag_sel=1;
+      end
+    default: ;
+  endcase
+end
+always_comb
+begin : next_state_logic
+     next_state = state;
+     case (state)
+        standard_s: begin
+            if (mem_read == 1)
+              if(hit0 == 1 || hit1 == 1)
+                next_state = standard_s;
+              else if (dirty_c==1)
+              next_state=write_back_s;
+              else
+              next_state=read_s;
+            else if (mem_write == 1)
+              if(hit0 == 1 || hit1 == 1)
+                next_state = standard_s;
+              else if (dirty_c==1)
+                next_state=write_back_s;
+              else next_state=read_s;
+        end
+        read_s: begin
+          if (pmem_resp == 0)
+            next_state = read_s;
+          else
+            next_state = standard_s;
+        end
+        write_back_s: begin
+          if (pmem_resp == 0)
+            next_state = write_back_s;
+          else
+            next_state = read_s;
+        end
+        default: next_state = standard_s;
+     endcase
+end
+
+always_ff @(posedge clk)
+begin: next_state_assignment
+    state <= next_state;
+end
+
+endmodule : cache_control

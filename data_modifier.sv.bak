@@ -1,0 +1,17 @@
+module data_modifier(
+  input logic mem_byte_enable,
+  input logic load_word,
+  input logic wdata_from_cpu,
+  input logic load_line,
+  input logic offset,
+  input logic data_out,
+  output logic data_changed_in
+  );
+
+given data_out as an input
+check load word
+if load word
+find offset, move to that place, and put wdata there
+output data_changed_in
+
+what is mem_byte_enable for

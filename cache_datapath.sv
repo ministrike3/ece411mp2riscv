@@ -1,0 +1,261 @@
+module cache_datapath(
+  input clk,
+  input [31:0] mem_address,
+  input [31:0] mem_wdata,
+  input [3:0] mem_byte_enable,
+  input [255:0] pmem_rdata,
+  input logic way_sel,
+  input logic load_lru,
+  input logic lru_in,
+  input logic tag_sel,
+  input logic load_line,
+  input logic load_word,
+  output logic hit0,
+  output logic hit1,
+  output logic valid_in,
+  output logic dirty_c,
+  output logic lru_out,
+  output [31:0] pmem_address,
+  output [255:0] pmem_wdata,
+  output [31:0] mem_rdata
+  );
+
+logic [2:0] set;
+logic [4:0] offset;
+logic[31:0] data_word_out0, data_word_out1;
+logic[23:0] tag_in, tag0, tag1, tagmuxout,pmem_tag_out;
+logic [255:0] data0,data1;
+logic [255:0] data_out0,data_out1;
+logic [255:0] to_data_array_0,to_data_array_1;
+logic [255:0] data_changed_in0,data_changed_in1;
+logic load_tag0, load_tag1, load_dirty0, load_dirty1;
+logic load_valid0, load_valid1, dirty_in0, dirty_in1;
+logic load_data0, load_data1, dirty_out0,dirty_out1, valid_out0, valid_out1;
+
+assign offset=mem_address[4:0];
+assign set=mem_address[7:5];
+assign tag_in=mem_address[31:8];
+assign pmem_address={pmem_tag_out,set,{5'b0}};
+assign data_word_out0=data_out0[(8*offset) +:32]; // Does This function correctly
+assign data_word_out1=data_out1[(8*offset) +:32]; // Does This function correctly 
+always_comb
+begin:inputs
+load_tag0=0;
+load_valid0=0;
+load_dirty0=0;
+load_data0=0;
+load_tag1=0;
+load_valid1=0;
+load_dirty1=0;
+load_data1=0;
+dirty_in0=0;
+dirty_in1=0;
+  if(way_sel==0)begin
+    if (load_line==1)begin
+    load_tag0=1;
+    load_valid0=1;
+    load_dirty0=1;
+    load_data0=1;
+    end
+    if (load_word==1)begin
+    load_dirty0=1;
+    load_data0=1;
+    dirty_in0=1;
+    end
+  end
+  else if(way_sel==1)begin
+    if (load_line==1)begin
+    load_tag1=1;
+    load_valid1=1;
+    load_dirty1=1;
+    load_data1=1;
+    end
+    if (load_word==1)begin
+    load_dirty1=1;
+    load_data1=1;
+    dirty_in1=1;
+    end
+  end
+end
+
+
+
+array data_array0
+(
+    .clk(clk),
+    .write(load_data0),
+	.index(set),
+    .datain(to_data_array_0), // This should be modified correctly
+    .dataout(data_out0)
+    );
+array data_array1
+(
+    .clk(clk),
+    .write(load_data1),
+	.index(set),
+    .datain(to_data_array_1),  // This should be modified correctly now
+    .dataout(data_out1)
+    );
+// These are 2 data_in_modifier and a 2 data_mux_chooser that should route 
+// the right data to the right data arrays 
+
+mux2 #(.width(256)) data_mux_in_chooser_0
+(
+    .sel(load_word),
+    .a(pmem_rdata),
+    .b(data_changed_in0),
+    .f(to_data_array_0)
+);
+
+mux2 #(.width(256)) data_mux_in_chooser_1
+(
+    .sel(load_word),
+    .a(pmem_rdata),
+    .b(data_changed_in1),
+    .f(to_data_array_1)
+);
+
+
+data_modifier data_in_modifier0(
+  .mem_byte_enable,
+  .wdata_from_cpu(mem_wdata),
+  .offset,
+  .data_out(data_out0),
+  .data_changed_in(data_changed_in0)
+  );
+
+data_modifier data_in_modifier1(
+  .mem_byte_enable,
+  .wdata_from_cpu(mem_wdata),
+  .offset,
+  .data_out(data_out1),
+  .data_changed_in(data_changed_in1)
+  );
+
+
+array #(.width(24)) tag_array0
+(
+	.clk(clk),
+	.write(load_tag0),
+.index(set),
+	.datain(tag_in),
+	.dataout(tag0)
+    );
+array #(.width(24)) tag_array1
+(
+	.clk(clk),
+	.write(load_tag1),
+.index(set),
+	.datain(tag_in),
+	.dataout(tag1)
+    );
+array #(.width(1)) dirty_array0
+(
+    .clk(clk),
+    .write(load_dirty0),
+	.index(set),
+    .datain(dirty_in0),
+    .dataout(dirty_out0)
+    );
+array #(.width(1)) dirty_array1
+(
+    .clk(clk),
+    .write(load_dirty1),
+	.index(set),
+    .datain(dirty_in1),
+    .dataout(dirty_out1)
+    );
+
+array #(.width(1)) valid_array0
+(
+    .clk(clk),
+    .write(load_valid0),
+    .index(set),
+    .datain(1'b1),
+    .dataout(valid_out0)
+    );
+
+array #(.width(1)) valid_array1
+(
+    .clk(clk),
+    .write(load_valid1),
+.index(set),
+    .datain(1'b1),
+    .dataout(valid_out1)
+    );
+
+array #(.width(1)) lru
+(
+	.clk,
+	.write(load_lru),
+.index(set),
+	.datain(lru_in),
+	.dataout(lru_out)
+);
+
+cache_compare c0
+(
+    .a(tag_in),
+    .b(tag0),
+    .valid(valid_out0),
+    .eq(hit0)
+    );
+cache_compare c1
+(
+    .a(tag_in),
+    .b(tag1),
+    .valid(valid_out1),
+    .eq(hit1)
+    );
+
+mux2 #(.width(24)) tagmux
+(
+    .sel(way_sel),
+    .a(tag0),
+    .b(tag1),
+    .f(tagmuxout)
+);
+
+mux2 #(.width(24))pmem_tag_sel
+(
+    .sel(tag_sel),
+    .a(tag_in),
+    .b(tagmuxout),
+    .f(pmem_tag_out)
+);
+
+
+
+mux2 #(.width(256)) datamux
+(
+    .sel(way_sel),
+    .a(data_out0),
+    .b(data_out1),
+    .f(pmem_wdata)
+);
+
+mux2 #(.width(32))memrdatamux
+(
+    .sel(way_sel),
+    .a(data_word_out0),
+    .b(data_word_out1),
+    .f(mem_rdata)
+);
+
+mux2 #(.width(1))validmux
+(
+    .sel(way_sel),
+    .a(valid_out0),
+    .b(valid_out1),
+    .f(valid_in)
+);
+
+mux2 #(.width(1))dirtymux
+(
+    .sel(lru_out),
+    .a(dirty_out0),
+    .b(dirty_out1),
+    .f(dirty_c)
+);
+
+endmodule

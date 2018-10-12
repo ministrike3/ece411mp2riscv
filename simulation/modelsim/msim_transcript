@@ -1,0 +1,231 @@
+# do mp2_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/data_modifier.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module data_modifier
+# 
+# Top level modules:
+# 	data_modifier
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/cache_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cache_control
+# 
+# Top level modules:
+# 	cache_control
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/cache_compare.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cache_compare
+# 
+# Top level modules:
+# 	cache_compare
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/array.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module array
+# 
+# Top level modules:
+# 	array
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/rv32i_types.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package rv32i_types
+# 
+# Top level modules:
+# 	--none--
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/register.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/regfile.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/pc_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pc_register
+# 
+# Top level modules:
+# 	pc_register
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/mux8.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux8
+# 
+# Top level modules:
+# 	mux8
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/mux2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/ldselect.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ldselect
+# 
+# Top level modules:
+# 	ldselect
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/cpu_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cpu_control_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module cpu_control
+# 
+# Top level modules:
+# 	cpu_control
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/cache_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cache_datapath
+# 
+# Top level modules:
+# 	cache_datapath
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/ir.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package ir_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module ir
+# 
+# Top level modules:
+# 	ir
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/comparator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package comparator_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module comparator
+# 
+# Top level modules:
+# 	comparator
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/alu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package alu_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/cpu_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cpu_datapath_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module cpu_datapath
+# 
+# Top level modules:
+# 	cpu_datapath
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/cache.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cache
+# 
+# Top level modules:
+# 	cache
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/cpu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cpu_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module cpu
+# 
+# Top level modules:
+# 	cpu
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/mp2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp2_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module mp2
+# 
+# Top level modules:
+# 	mp2
+# 
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/mp2_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mp2_tb
+# 
+# Top level modules:
+# 	mp2_tb
+# vlog -sv -work work +incdir+/home/nkpatel6/ece411/mp2 {/home/nkpatel6/ece411/mp2/physical_memory.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module physical_memory
+# 
+# Top level modules:
+# 	physical_memory
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp2_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp2_tb 
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.rv32i_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.mux2
+# Loading work.mux8
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.pc_register
+# Loading work.regfile
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.register
+# Loading work.comparator_sv_unit
+# Loading work.comparator
+# Loading work.ldselect
+# Loading work.cache
+# Loading work.cache_control
+# Loading work.cache_datapath
+# Loading work.array
+# Loading work.data_modifier
+# Loading work.cache_compare
+# Loading work.physical_memory
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+do wave.do
+restart -f
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.rv32i_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.mux2
+# Loading work.mux8
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.pc_register
+# Loading work.regfile
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.register
+# Loading work.comparator_sv_unit
+# Loading work.comparator
+# Loading work.ldselect
+# Loading work.cache
+# Loading work.cache_control
+# Loading work.cache_datapath
+# Loading work.array
+# Loading work.data_modifier
+# Loading work.cache_compare
+# Loading work.physical_memory
+run 25000ns

@@ -1,0 +1,18 @@
+Fitter Status : Successful - Sun Sep 16 19:30:21 2018
+Quartus II 32-bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
+Revision Name : mp1
+Top-level Entity Name : mp1
+Family : Stratix III
+Device : EP3SE80F780C2
+Timing Models : Final
+Logic utilization : 4 %
+    Combinational ALUTs : 1,409 / 64,000 ( 2 % )
+    Memory ALUTs : 0 / 32,000 ( 0 % )
+    Dedicated logic registers : 1,200 / 64,000 ( 2 % )
+Total registers : 1200
+Total pins : 104 / 488 ( 21 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 6,331,392 ( 0 % )
+DSP block 18-bit elements : 0 / 672 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

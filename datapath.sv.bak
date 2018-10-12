@@ -1,0 +1,39 @@
+import rv32i_types::*;
+
+module datapath
+(
+    input clk,
+
+    /* control signals */
+    input pcmux_sel,
+    input load_pc
+
+    /* declare more ports here */
+);
+
+/* declare internal signals */
+rv32i_word pcmux_out;
+rv32i_word pc_out;
+rv32i_word alu_out;
+rv32i_word pc_plus4_out;
+
+/*
+ * PC
+ */
+mux2 pcmux
+(
+    .sel(pcmux_sel),
+    .a(pc_plus4_out),
+    .b(alu_out),
+    .f(pcmux_out)
+);
+
+pc_register pc
+(
+    .clk,
+    .load(load_pc),
+    .in(pcmux_out),
+    .out(pc_out)
+);
+
+endmodule : datapath

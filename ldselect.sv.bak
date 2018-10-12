@@ -1,0 +1,27 @@
+module ldselect #(parameter width = 32)
+(
+input [2:0] sel,
+input [width-1:0] a, b, c, d, e
+output logic [width-1:0] z
+);
+always_comb
+begin
+case(sel)
+	0:begin
+		z=a;
+	end
+	1:begin
+		z=b;
+	end
+	2:begin
+		z=c;
+	end
+	3:begin
+		z=d;
+	end
+	default:begin
+	z=e;
+	end
+endcase
+end
+endmodule : ldselect
